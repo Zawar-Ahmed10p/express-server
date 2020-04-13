@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "start": "nodemon bin/server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests/**/*Tests.js"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +14,13 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
-    "mongoose": "^5.9.7"
+    "mocha": "^7.1.1",
+    "mongoose": "^5.9.7",
+    "sinon": "^9.0.2"
   },
   "devDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^6.8.0",
+    "should": "^13.2.3",
+    "supertest": "^4.0.2"
   }
 }
