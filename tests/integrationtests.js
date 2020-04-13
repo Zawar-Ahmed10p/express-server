@@ -9,7 +9,6 @@ describe ("user crud",()=>{
         const user = {title:"ahmed old",gender:"male",delete:true,password:"pwd"};
         agent.post("/users").send(user)
         .expect(200).end((err,response)=>{
-            console.log(err);
             response.body.should.have.property('_id');
             done();
         });

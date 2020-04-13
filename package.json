@@ -5,7 +5,7 @@
   "main": "bin/server.js",
   "scripts": {
     "lint": "eslint .",
-    "start": "nodemon bin/server.js",
+    "start": "DEBUG=app nodemon bin/server.js",
     "test": "mocha tests/**/*Tests.js"
   },
   "keywords": [],
@@ -13,9 +13,16 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "bootstrap": "^4.4.1",
+    "chalk": "^4.0.0",
+    "debug": "^4.1.1",
     "express": "^4.17.1",
+    "jquery": "^3.5.0",
+    "jsquery": "^1.1.1",
     "mocha": "^7.1.1",
     "mongoose": "^5.9.7",
+    "morgan": "^1.10.0",
+    "pug": "^2.0.4",
     "sinon": "^9.0.2"
   },
   "devDependencies": {

@@ -12,16 +12,13 @@ router.route('/validate')
 router.route('/search')
     .get(async  function(req,res){
         resp= await userControllers.search(req.query);
-        console.log(resp);
         res.status(200)
         return res.json(resp);
-        // res.json({dasd:"dasd"});
 });
 
 router.route('/')
     .post(async function(req,res){
         resp =await  userControllers.adduser(req);
-        // console.log(resp);
         if(resp){
         res.status(200);
         return res.json(resp);
@@ -31,9 +28,7 @@ router.route('/')
 
 
 router.use('/user/:userId',async(req,res,next)=>{
-    // console.log(req.params.userId);
     user=await userControllers.searchId(req);
-    // console.log(resp);
     if(user){
         req.user=user;
         return next();
@@ -43,7 +38,6 @@ router.use('/user/:userId',async(req,res,next)=>{
 
 router.route('/user/:userId')
     .get(async function(req,res){
-    // console.log(req.body);
     const dbuser = req.user.toJSON();
     res.status(200)
     return res.json(dbuser);

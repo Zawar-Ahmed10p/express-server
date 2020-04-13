@@ -16,3 +16,4 @@ function onListen(){
         console.log(server.address());
     
 }
+module.exports=server;
