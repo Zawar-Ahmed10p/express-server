@@ -4,26 +4,38 @@
   "description": "",
   "main": "bin/server.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "./node_modules/.bin/eslint .",
     "start": "DEBUG=app nodemon bin/server.js",
-    "test": "mocha tests/**/*Tests.js"
+    "test": "mocha test/**/*.Tests.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.1",
+    "chai": "^4.2.0",
     "chalk": "^4.0.0",
+    "cookie-parser": "^1.4.5",
     "debug": "^4.1.1",
+    "ejs": "^3.0.2",
     "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "istanbul": "^0.4.5",
     "jquery": "^3.5.0",
     "jsquery": "^1.1.1",
     "mocha": "^7.1.1",
     "mongoose": "^5.9.7",
     "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "pg": "^8.0.2",
+    "pg-hstore": "^2.3.3",
     "pug": "^2.0.4",
-    "sinon": "^9.0.2"
+    "sequelize": "^5.21.6",
+    "sinon": "^9.0.2",
+    "xml2js": "^0.4.23"
   },
   "devDependencies": {
     "eslint": "^6.8.0",
