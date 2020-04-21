@@ -4,7 +4,7 @@ describe("Admin Controller test", (done) => {
 
   describe("addUser", function () {
 
-    it("should add user to db", async function () {
+    it("should add user to db using sinon mock", async function () {
       var req = {
         body: {
           username: "asad",
@@ -26,7 +26,7 @@ describe("Admin Controller test", (done) => {
 
 
 
-    it.skip("should insert data using sinon mock", async function () {
+    it.skip("skip test", async function () {
       this.timeout(150000);
       var req = {
         body: {

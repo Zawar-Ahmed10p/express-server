@@ -11,7 +11,7 @@ const db = mongoose.connect("mongodb://localhost/users",
   { useNewUrlParser: true ,
     useUnifiedTopology: true });
 const sequelize = require("sequelize");
-pgDb = new sequelize("URI")
+pgDb = new sequelize("postgres://postgres:password@localhost:5432/test")
 module.exports.pgDb=pgDb;
 const pg = require("./repositories/postgres");
 module.exports.db = db;
